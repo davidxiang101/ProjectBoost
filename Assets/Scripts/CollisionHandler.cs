@@ -11,16 +11,27 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("OK");
                 break;
             case "Finish":
-                NextLevel();
+                StartNextSequence();
                 break;
             case "Fuel":
                 Debug.Log("Fuel");
                 break;
             default:
-                ReloadLevel();
-                
+                StartCrashSquence();
                 break;
         }
+    }
+
+    void StartCrashSquence()
+    {
+        GetComponent<Movement>().enabled = false;
+        Invoke("ReloadLevel", 1f);
+    }
+
+    void StartNextSequence()
+    {
+        GetComponent<Movement>().enabled = false;
+        Invoke("NextLevel", 1f);
     }
 
     void NextLevel()
@@ -34,6 +45,8 @@ public class CollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
-        
+        Debug.Log("Reload Level");
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
