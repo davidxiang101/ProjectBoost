@@ -134,6 +134,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 3942237468538389515, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+      propertyPath: leftThrustParticles
+      value: 
+      objectReference: {fileID: 1405561559}
+    - target: {fileID: 3942237468538389515, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+      propertyPath: mainThrustParticles
+      value: 
+      objectReference: {fileID: 238476378}
+    - target: {fileID: 3942237468538389515, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+      propertyPath: rightThrustParticles
+      value: 
+      objectReference: {fileID: 834220803}
     - target: {fileID: 4453918232760369304, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -180,6 +192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+--- !u!198 &238476378 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5314677403157854668, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+  m_PrefabInstance: {fileID: 129018380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +291,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!198 &834220803 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 704409605249050285, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+  m_PrefabInstance: {fileID: 129018380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525eb030fe11f8049bc0217e69450001, type: 3}
+--- !u!198 &1405561559 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4889889926987794543, guid: 27da15c295e57c5448557bdb4d9c8d25, type: 3}
+  m_PrefabInstance: {fileID: 129018380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1573719164
 PrefabInstance:
   m_ObjectHideFlags: 0

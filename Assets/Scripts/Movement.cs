@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     {
-         if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(1f);
             if (!rightThrustParticles.isPlaying)

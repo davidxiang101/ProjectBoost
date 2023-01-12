@@ -119,9 +119,9 @@ MonoBehaviour:
   thrustForce: 1000
   rotationForce: 100
   mainEngineSound: {fileID: 8300000, guid: 4eb9e5282e7fdb64587a9da79ec7ba23, type: 3}
-  leftThrustParticles: {fileID: 0}
-  rightThrustParticles: {fileID: 0}
-  mainThrustParticles: {fileID: 0}
+  leftThrustParticles: {fileID: 4889889926987794543}
+  rightThrustParticles: {fileID: 704409605249050285}
+  mainThrustParticles: {fileID: 5314677403157854668}
 --- !u!82 &615113566
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1374,6 +1374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+--- !u!198 &704409605249050285 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 584678573886053986, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+  m_PrefabInstance: {fileID: 133879686047250639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &822143281574522085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
@@ -1590,6 +1595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
+--- !u!198 &5314677403157854668 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198100719057022332, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
+  m_PrefabInstance: {fileID: 5439870601225327792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5435775241332978564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4940884351362868, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
@@ -1667,5 +1677,10 @@ PrefabInstance:
 --- !u!4 &4715874381947552295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
+  m_PrefabInstance: {fileID: 5458735395449394701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4889889926987794543 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 584678573886053986, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
   m_PrefabInstance: {fileID: 5458735395449394701}
   m_PrefabAsset: {fileID: 0}
