@@ -1,10 +1,28 @@
-using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
+
+    [SerializeField] AudioClip successSound;
+    [SerializeField] AudioClip deathSound;
+
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem deathParticles;
+
+    AudioSource audioSource;
+
+    bool isTransitioning = false;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void OnCollisionEnter(Collision other)
     {
+        if (isTransitioning) { return; }
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -24,13 +42,21 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSquence()
     {
+        isTransitioning = true;
         GetComponent<Movement>().enabled = false;
+        audioSource.Stop();
+        audioSource.PlayOneShot(deathSound);
+        deathParticles.Play();
         Invoke("ReloadLevel", 1f);
     }
 
     void StartNextSequence()
     {
+        isTransitioning = true;
         GetComponent<Movement>().enabled = false;
+        audioSource.Stop();
+        audioSource.PlayOneShot(successSound);
+        successParticles.Play();
         Invoke("NextLevel", 1f);
     }
 

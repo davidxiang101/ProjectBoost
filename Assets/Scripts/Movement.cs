@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody rb;
-    AudioSource audioSource;
+   
     [SerializeField] float thrustForce = 80;
     [SerializeField] float rotationForce = 100;
+    [SerializeField] AudioClip mainEngineSound;
+
+    [SerializeField] ParticleSystem leftThrustParticles;
+    [SerializeField] ParticleSystem rightThrustParticles;
+    [SerializeField] ParticleSystem mainThrustParticles;
+
+    Rigidbody rb;
+    AudioSource audioSource;
 
 
     // Start is called before the first frame update
@@ -31,12 +38,17 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * thrustForce * Time.deltaTime);
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngineSound);
+            }
+            if (!mainThrustParticles.isPlaying)
+            {
+                mainThrustParticles.Play();
             }
         }
         else
         {
             audioSource.Stop();
+            mainThrustParticles.Stop();
         }
     }
 
@@ -45,10 +57,23 @@ public class Movement : MonoBehaviour
          if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(1f);
+            if (!rightThrustParticles.isPlaying)
+            {
+                rightThrustParticles.Play();
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
             ApplyRotation(-1f);
+            if (!leftThrustParticles.isPlaying)
+            {
+                leftThrustParticles.Play();
+            }
+        }
+        else
+        {
+            leftThrustParticles.Stop();
+            rightThrustParticles.Stop();
         }
     }
 
